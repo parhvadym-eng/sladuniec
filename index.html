@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Countdown Timer</title>
+  <title>Website</title>
   <style>
     body {
       display: flex;
@@ -37,20 +37,6 @@
       align-items: center;
     }
     
-    .title {
-      font-size: 48px;
-      margin-bottom: 30px;
-      color: #333;
-      font-weight: bold;
-    }
-    
-    #timer {
-      font-size: 72px;
-      color: #333;
-      font-weight: bold;
-      min-width: 500px;
-    }
-    
     .subtitle {
       font-size: 48px;
       color: red;
@@ -67,33 +53,9 @@
   </div>
   
   <div class="content">
-    <div class="title">Зворотнiй відлік</div>
-    <div id="timer"></div>
-    <div class="subtitle">ЩЯБЗЮЦЩМЖЬЩЩ</div>
+    <div class="subtitle">ПIДОР :)</div>
   </div>
 </div>
-
-<script>
-  const endDate = new Date("2026-04-29 21:00:00").getTime();
-
-  const x = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = endDate - now;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
-
-    document.getElementById("timer").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("timer").innerHTML = "TIME UP";
-    }
-  }, 1000);
-</script>
 
 </body>
 
